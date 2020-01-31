@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SMS"
+                   namespace="SMS.Model">
+  
+  <class name="Product" >
+    <id name="Id">
+      <generator class="guid" />
+    </id>
+    <property name="Name" />
+    <property name="InStock"/>
+    <property name="MinStock"/>
+    <property name="Price"/>
+    <property name="BelowMinStock"/>
+  </class>
+
+  
+  
+  <!-- more mapping info here -->
+
+</hibernate-mapping>

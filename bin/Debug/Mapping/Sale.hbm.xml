@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SMS"
+                   namespace="SMS.Model">
+  <class name="Sale">
+    <id name="Id">
+      <generator class="guid" />
+    </id>
+
+    <property name="Date" />
+    
+    <property name="Total"/>
+
+    <bag name="Items" inverse="true" cascade="all-delete-orphan">
+      <key column="saleitem_id"/>
+      <one-to-many class="SaleItem"/>
+    </bag>
+    
+</class>
+
+
+  <!-- more mapping info here -->
+
+</hibernate-mapping>
